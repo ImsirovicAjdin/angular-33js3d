@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { fromEvent } from 'rxjs/observable/fromEvent';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'my-app',
@@ -9,7 +10,7 @@ export class AppComponent  {
 
   observable = fromEvent(window, 'mousemove');
 
-  constructor(){
+  constructor(private http = HttpClient){
     this.observable.subscribe( x => console.log('You moved your mouse') );
   }
 
