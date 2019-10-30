@@ -10,13 +10,7 @@ export class AppComponent  {
   observable = fromEvent(window, 'mousemove');
 
   constructor(){
-
-    this.observable.subscribe(
-      x => console.log('You moved your mouse'),
-      x => console.error('There was an error'),
-      () => console.log('the Observable stream has ended')
-    );
-    
+    this.observable.subscribe( x => console.log('You moved your mouse') );
   }
 
 }
