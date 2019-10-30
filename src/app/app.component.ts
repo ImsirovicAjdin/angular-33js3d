@@ -12,7 +12,7 @@ export class AppComponent  {
   constructor(private http: HttpClient){}
 
   ngOnInit() {
-      this.http.get('https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline').subscribe( 
+      this.http.get('https://api.coindesk.com/v1/bpi/currentprice.json').subscribe( 
         x => console.log(x),
         x => console.error('%c no data came in', 'font-size: 20px; color: white; background: tomato'  )
       );    
